@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  .animate-zoomIn {
+    animation: zoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  .immersive-bg {
+    background: radial-gradient(circle at 0% 0%, rgba(239, 68, 68, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(249, 115, 22, 0.08) 0%, transparent 50%),
+                #080808;
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .glow-text {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+  }
+  .photo-card-shadow {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
