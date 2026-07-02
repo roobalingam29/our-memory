@@ -1,0 +1,6 @@
+{
+  "name": "Our Memories",
+  "description": "A private, secure digital photo gallery to preserve your most cherished moments together.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
